@@ -10,15 +10,13 @@ gui.title("Password Generator")  #customizing application window
 gui.geometry('400x350')          #sizing
 gui.resizable(0,0)               #resizing of window by user is set to False
 
-#adding Widgets to main window
-
-
 
 #method for password generation
+
 def Process():
     password=""
     All_pass=[]
-    Pass_length=int(input("Enter length of password: "))
+    Pass_length=int(pass_length.get())
 
     char_values=string.ascii_letters+string.digits+string.punctuation  #adding all alphabets,numbers and punc through this module string
 
@@ -33,9 +31,13 @@ def Process():
         x+=1
     return All_pass
 
+#adding Widgets to main window
+pass_length=StringVar()
+label = Label(text="Password Length").pack()
+txt = Entry(textvariable=pass_length).pack()
+btn=Button(text="Generate",command=Process).pack()
 
-All_pass=Process()
-print(All_pass)
+gui.mainloop()
 
-
-
+#All_pass=Process()
+#print(All_pass)
