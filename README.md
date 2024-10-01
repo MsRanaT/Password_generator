@@ -1,6 +1,7 @@
 this is a password geneartor by using various modules to shrink the code.
 <br>
 import string       to use detailed string functions 
+<br>
 import random       to genrate diff/random passwords every time
 <br>
 <br>
